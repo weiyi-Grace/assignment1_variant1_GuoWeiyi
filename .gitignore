@@ -1,6 +1,0 @@
-.venv/
-__pycache__/
-*.pyc
-.mplconfig/
-outputs/*.joblib
-outputs/test_predictions.csv
