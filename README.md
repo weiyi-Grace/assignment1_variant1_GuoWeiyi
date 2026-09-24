@@ -1,6 +1,6 @@
 # IN6227 Assignment 1 — Variant 1
 
-本项目比较 **CART 决策树** 和 **L2 正则化逻辑回归**，另外提供多数类预测作为基线。代码按作业要求组织完整分类流程，重点是能够解释每一步，而不是追求最高准确率。
+本项目比较 **CART 决策树** 和 **L2 正则化逻辑回归**，另外提供多数类预测作为基线。
 
 ## 运行
 
@@ -11,14 +11,6 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe train.py --data-dir "D:\dataset"
 ```
-
-本机已经准备好父目录的环境，也可在 `D:\msis\data mining` 直接运行：
-
-```powershell
-.\.venv\Scripts\python.exe assignment_variant1\train.py --data-dir "D:\dataset"
-```
-
-默认结果写入代码旁的 `outputs` 文件夹。`--output-dir` 可设置其他结果目录，`--jobs` 可设置交叉验证并行数，默认 1，便于普通电脑稳定运行。数据无需复制进项目，也不必上传到 GitHub。
 
 ## 分类流程及理由
 
@@ -57,6 +49,4 @@ python -m venv .venv
 
 系数和树重要性反映模型关联，不代表因果关系；one-hot 特征也会分散同一个原始字段的重要性。交叉验证最优分数存在调参选择偏差，最终测试结果用于独立比较；折间标准差不是置信区间。一次固定划分不能证明模型在其他数据上仍然领先。字段来源未知，无法确认是否存在时间/实体相关性或语义层面的目标泄漏。
 
-## 提交说明
 
-你这次要求的是代码，因此交付包括源代码、已训练模型及实验结果。作业最终另外要求不超过两页的 PDF 报告、姓名、学号、`IN6227-Assignment-1`、`Variant-1`，以及源码 GitHub 链接。此项目尚未上传 GitHub，也未代填个人信息。可以根据 `RESULTS.md` 和实际输出编写报告，理解并核对后再提交。
